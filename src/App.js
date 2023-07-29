@@ -1,11 +1,7 @@
-import Button from '~/components/Button';
-function App() {
-    return (
-        <div className="App">
-            <Button> NUT OK</Button>
+import { DefaultLayout } from './layouts';
 
-        </div>
-    );
+function App() {
+    return <DefaultLayout>noi dung</DefaultLayout>;
 }
 
 export default App;
