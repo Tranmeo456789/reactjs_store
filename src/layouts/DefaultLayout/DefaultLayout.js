@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 import Header from '~/layouts/components/Header';
@@ -10,16 +9,12 @@ function DefaultLayout({ children }) {
     const cx = classNames.bind(styles);
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('container')}>
-                <Header />
-            </div>
+            <Header />
             <div className={cx('container')}>
                 <Sidebar />
                 <div className={cx('content')}>{children}</div>
             </div>
-            <div className={cx('container')}>
-                <Footer />
-            </div>
+            <Footer />
         </div>
     );
 }

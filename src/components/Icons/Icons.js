@@ -14,6 +14,23 @@ export const UploadIcon = ({ width = '3.2rem', height = '3.2rem', className }) =
         ></path>
     </svg>
 );
+    
+export const CartIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M23.35 4H8.65C8.19796 4 7.7855 4.19584 7.46447 4.51693C7.14345 4.83801 6.94777 5.25047 6.94777 5.70251L6.94427 6.00504H5.30701C4.63706 6.00504 4.01449 6.26747 3.56502 6.71694C3.11554 7.16641 2.85311 7.789 2.85311 8.45895V26.0449C2.85311 26.5717 3.09828 27.0719 3.53446 27.4335C3.97064 27.795 4.56036 28.001 5.17559 28H22.8245C23.4396 28.001 24.0293 27.795 24.4655 27.4335C24.9017 27.0719 25.1469 26.5717 25.1469 26.0449V8.45895C25.1469 7.789 24.8845 7.16641 24.435 6.71694C23.9855 6.26747 23.3629 6.00504 22.693 6.00504H21.0557L21.0522 5.70251C21.0522 5.250"
+        />
+    </svg>
+);
 
 export const MessageIcon = ({ width = '2.6rem', height = '2.6rem', className }) => (
     <svg
