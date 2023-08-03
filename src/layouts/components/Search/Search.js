@@ -6,7 +6,7 @@ import classNames from 'classnames/bind';
 
 import * as searchServices from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem';
+import ProductItem from '~/components/ProductItem';
 import { SearchIcon } from '~/components/Icons';
 import { useDebounce } from '~/hooks';
 import styles from './Search.module.scss';
@@ -69,7 +69,7 @@ function Search() {
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>
                             {searchResult.map((result) => (
-                                <AccountItem key={result.id} data={result} />
+                                <ProductItem key={result.id} data={result} />
                             ))}
                         </PopperWrapper>
                     </div>

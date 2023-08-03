@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import Image from '~/components/Image';
-import styles from './AccountItem.module.scss';
+import styles from './ProductItem.module.scss';
 import config from '~/config';
 
 const cx = classNames.bind(styles);
 const urlApiPublic = config.urlApi.public;
-function AccountItem({ data }) {
+function ProductItem({ data }) {
     const srcImage = urlApiPublic + data.thumbnail;
     return (
         <Link to={`/@${data.id}`} className={cx('wrapper')}>
@@ -26,7 +26,7 @@ function AccountItem({ data }) {
     );
 }
 
-AccountItem.propTypes = {
+ProductItem.propTypes = {
     data: PropTypes.object.isRequired,
 }
-export default AccountItem;
+export default ProductItem;

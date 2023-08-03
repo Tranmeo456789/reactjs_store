@@ -14,6 +14,12 @@ function Header() {
     return (
         <div>
             <header>
+                <div className={cx('header-top')}>
+                    <div class="d-flex align-items-center">
+                        <span className={cx('circle-ripple')}></span>
+                    </div>
+                    <p lang="en">Kết nối mua sắm online</p>
+                </div>
                 <div className={cx('wrapper')}>
                     <div className={cx('inner')}>
                         <Link to={config.routes.home} className={cx('logo-link')}>
