@@ -17,8 +17,7 @@ function ProductItem({ data }) {
             <Image className={cx('avatar')} src={srcImage} alt={data.name} />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
-                    <span>{data.name}</span>
-                    {/* {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />} */}
+                    <p>{data.name}</p>
                 </h4>
                 <span className={cx('price')}>{data.price}đ</span>
             </div>

@@ -25,7 +25,16 @@
     font-size: 1.6rem;
     font-weight: 500;
 }
-
+.name p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -moz-line-clamp: 1;
+    -o-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    overflow: hidden;
+}
 .check {
     margin-left: 6px;
     color: rgb(32, 213, 236);

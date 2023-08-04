@@ -15,12 +15,42 @@ function Header() {
         <div>
             <header>
                 <div className={cx('header-top')}>
-                    <div class="d-flex align-items-center">
-                        <span className={cx('circle-ripple')}></span>
-                    </div>
+                    <span className={cx('circle-ripple')}></span>
                     <p lang="en">Kết nối mua sắm online</p>
                 </div>
                 <div className={cx('wrapper')}>
+                    <div className={cx('inner')}>
+                        <ul className='d-flex'>
+                            <li>
+                                <Link to={config.routes.home} className={cx('item-menu')}>
+                                    Trang chủ
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={config.routes.product} className={cx('item-menu')}>
+                                    Sản phẩm
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={config.routes.new} className={cx('item-menu')}>
+                                    Tin tức
+                                </Link>
+                            </li>
+                        </ul>
+                        <ul className='d-flex'>
+                            <li>
+                                <Link to="" className={cx('item-menu')}>
+                                    Đăng ký
+                                </Link>
+                            </li>
+                            <li className={cx('item-menu')}>|</li>
+                            <li>
+                                <Link to="" className={cx('item-menu')}>
+                                    Đăng nhập
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
                     <div className={cx('inner')}>
                         <Link to={config.routes.home} className={cx('logo-link')}>
                             <Image src={images.logo} alt="store-thuc" />

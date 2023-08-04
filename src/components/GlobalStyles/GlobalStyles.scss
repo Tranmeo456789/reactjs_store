@@ -60,7 +60,11 @@ a {
     color: var(--text-color);
     text-decoration: none;
 }
-
+ul{
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+}
 // Fonts emmbeded
 @font-face {
     font-family: ProximaNova;
@@ -106,5 +110,11 @@ body {
 
     .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
         top: -8px;
+    }
+    .d-flex{
+        display: flex;
+    }
+    .justify-content-between{
+        justify-content: space-between;
     }
 }
