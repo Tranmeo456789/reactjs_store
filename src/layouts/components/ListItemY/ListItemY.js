@@ -5,15 +5,22 @@ import ProductItem from '~/components/ProductItem';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 
-
 function ListItem({ title, items, type }) {
     const cx = classNames.bind(styles);
     const chillren = (item) => {
         switch (type) {
             case 'category':
-                return <p>{item.name}</p>;
+                return (
+                    <Link to="" className={cx('item')}>
+                        {item.name}
+                    </Link>
+                );
             case 'product':
-               return <ProductItem key={item.id} data={item}/>;
+                return (
+                    <span className={cx('item')}>
+                        <ProductItem key={item.id} data={item} />
+                    </span>
+                );
             default:
                 return null;
         }
@@ -23,11 +30,7 @@ function ListItem({ title, items, type }) {
             <div className={cx('header')}>{title}</div>
             <ul>
                 {items.map((item) => (
-                    <li key={item.id}>
-                        <Link to="" className={cx('item')}>
-                            {chillren(item)}
-                        </Link>
-                    </li>
+                    <li key={item.id}>{chillren(item)}</li>
                 ))}
             </ul>
         </div>
