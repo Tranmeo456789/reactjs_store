@@ -3,6 +3,7 @@ import { useState, forwardRef } from 'react';
 import classNames from 'classnames';
 import images from '~/assets/images';
 import styles from './Image.module.scss';
+import config from '~/config';
 
 const Image = forwardRef(({ src, alt, className, fallback: customFallback = images.noImage, ...props }, ref) => {
     const [fallback, setFallback] = useState('');
@@ -10,12 +11,13 @@ const Image = forwardRef(({ src, alt, className, fallback: customFallback = imag
     const handleError = () => {
         setFallback(customFallback);
     };
-
+    const urlApiPublic = config.urlApi.public;
+    const srcAdd = urlApiPublic + src;
     return (
         <img
             className={classNames(styles.wrapper, className)}
             ref={ref}
-            src={fallback || src}
+            src={fallback || srcAdd}
             alt={alt}
             {...props}
             onError={handleError}

@@ -6,12 +6,10 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import Image from '~/components/Image';
 import styles from './ProductItem.module.scss';
-import config from '~/config';
 
 const cx = classNames.bind(styles);
-const urlApiPublic = config.urlApi.public;
 function ProductItem({ data }) {
-    const srcImage = urlApiPublic + data.thumbnail;
+    const srcImage = data.thumbnail;
     return (
         <Link to={`/@${data.id}`} className={cx('wrapper')}>
             <Image className={cx('avatar')} src={srcImage} alt={data.name} />

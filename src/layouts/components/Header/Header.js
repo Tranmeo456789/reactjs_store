@@ -2,7 +2,6 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 
 import config from '~/config';
-import images from '~/assets/images';
 import styles from './Header.module.scss';
 import Image from '~/components/Image';
 import Search from '~/layouts/components/Search';
@@ -53,7 +52,7 @@ function Header() {
                     </div>
                     <div className={cx('inner')}>
                         <Link to={config.routes.home} className={cx('logo-link')}>
-                            <Image src={images.logo} alt="store-thuc" />
+                            <Image src='images/logo-moi.png' alt="store-thuc" />
                         </Link>
                         <Search />
                         <div className={cx('actions')}>
