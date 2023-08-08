@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ListItemY.module.scss';
 import ProductItem from '~/components/ProductItem';
+import TitleList from '~/layouts/components/TitleList';
 
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
@@ -18,7 +19,7 @@ function ListItem({ title, items, type }) {
             case 'product':
                 return (
                     <span className={cx('item')}>
-                        <ProductItem key={item.id} data={item} />
+                        <ProductItem key={item.id} data={item}/>
                     </span>
                 );
             default:
@@ -27,8 +28,8 @@ function ListItem({ title, items, type }) {
     };
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('header')}>{title}</div>
-            <ul>
+            <TitleList type='sidebar' title={title} />
+            <ul className={cx('list-item')}>
                 {items.map((item) => (
                     <li key={item.id}>{chillren(item)}</li>
                 ))}

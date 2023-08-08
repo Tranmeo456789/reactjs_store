@@ -36,7 +36,7 @@ function Support() {
             <ul>
                 {items.map((item) => (
                     <li>
-                        <div>
+                        <div className={cx('wp-avatar')}>
                             <Image className={cx('avatar')} src={item.thumbnail} />
                         </div>
                         <h3 className={cx('title')}>{item.title}</h3>
