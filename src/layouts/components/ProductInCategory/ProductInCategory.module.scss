@@ -7,9 +7,17 @@
     margin-right: 1%;
     margin-bottom: 1%;
     background: #fff;
-    border: 1px solid transparent;
+    border: 1px solid #fff;
     box-shadow: rgb(0 0 0 / 28%) 0px 6px 12px 0px;
+    &:hover{
+        border: 1px solid #ddd;
+    }
 }
 .wrapper ul li:nth-child(4n) {
-    margin-right: 0!important;
+    margin-right: 0 !important;
+}
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
 }

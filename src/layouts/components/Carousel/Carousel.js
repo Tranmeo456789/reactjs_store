@@ -30,7 +30,7 @@ function Carousel() {
         <div className={cx('wrapper')}>
             <ReactCarousel itemsToShow={1} showArrows={false} enableMouseSwipe={true} enableAutoPlay={true} autoPlaySpeed={500} enableTilt={true} initialActiveIndex={0}>
                 {items.map((item) => (
-                    <div>
+                    <div key={item.id}>
                         <Image className={cx('avatar')} src={item.thumbnail} />
                     </div>
                 ))}

@@ -30,7 +30,7 @@ function FeatureProduct() {
                     pagination={false}
                 >
                     {productFeature.map((item) => (
-                        <li>
+                        <li key={item.id}>
                             <ProductItem key={item.id} data={item} type="content" />
                         </li>
                     ))}

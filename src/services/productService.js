@@ -20,10 +20,12 @@ export const productFeature = async () => {
         console.log(error);
     }
 };
-export const productInCategory = async () => {
+export const CatIsProduct = async () => {
     try {
-        const res = await request.get('product/selling', {
-            params: {},
+        const res = await request.get('product/cat', {
+            params: {
+            
+            },
         });
         return res.data;
     } catch (error) {

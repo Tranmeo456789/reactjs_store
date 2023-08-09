@@ -8,25 +8,29 @@ import TitleList from '~/layouts/components/TitleList';
 
 const cx = classNames.bind(styles);
 function ProductInCategory({ product }) {
-    const [productInCategory, setproductInCategory] = useState([]);
+    const [catIsProduct, setcatIsProduct] = useState([]);
     useEffect(() => {
         const fetchApiProduct = async () => {
-            const result = await productService.productInCategory();
-            setproductInCategory(result);
+            const result = await productService.CatIsProduct();
+            setcatIsProduct(result);
         };
         fetchApiProduct();
     }, []);
     return (
-        <div className={cx('wrapper')}>
-            <TitleList type="content" title="danh muc" />
-            <ul className={cx('list-item')}>
-                {productInCategory.map((item) => (
-                    <li>
-                        <ProductItem key={item.id} data={item} type="content" />
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <>
+            {catIsProduct.map((productInCategory) => (
+                <div className={cx('wrapper')} key={productInCategory.id} >
+                    <TitleList type="content" title={productInCategory.name} />
+                    <ul className={cx('list-item','clearfix')}>
+                        {productInCategory['product'].map((item) => (
+                            <li key={item.id}>
+                                <ProductItem data={item} type="content" />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </>
     );
 }
 
