@@ -1,4 +1,15 @@
-.wrapper{
-    background-color: blue;
-    margin-bottom: 20px;
+.wrapper {
+    margin-bottom: 25px;
+}
+.wrapper ul li {
+    float: left;
+    width: 24.25%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    background: #fff;
+    border: 1px solid transparent;
+    box-shadow: rgb(0 0 0 / 28%) 0px 6px 12px 0px;
+}
+.wrapper ul li:nth-child(4n) {
+    margin-right: 0!important;
 }

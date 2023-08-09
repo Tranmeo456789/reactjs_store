@@ -17,7 +17,6 @@ function Home() {
             <TitleList type='content' title='Sản phẩm nổi bật' />
             <FeatureProduct />
             <ProductInCategory />
-            <ProductInCategory />
         </div>
     );
 }
