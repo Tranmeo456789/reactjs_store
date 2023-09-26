@@ -5,7 +5,7 @@
     --black: #000;
     --white: #fff;
     --text-color: #161823;
-
+    --info: #5468ff;
     --font-family: 'ProximaNova', sans-serif;
 
     // Default layout
@@ -55,19 +55,19 @@ input,
     outline: none;
     border: none;
 }
-button{
+button {
     cursor: pointer;
 }
 a {
     color: var(--text-color);
     text-decoration: none;
 }
-ul{
+ul {
     margin: 0px;
     padding: 0;
     list-style: none;
 }
-img{
+img {
     max-width: 100%;
     height: auto;
     max-height: 100%;
@@ -119,23 +119,23 @@ body {
     .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
         top: -8px;
     }
-    .d-flex{
+    .d-flex {
         display: flex;
     }
-    .justify-content-between{
+    .justify-content-between {
         justify-content: space-between;
     }
-    .position-relative{
+    .position-relative {
         position: relative;
     }
-    .rec-arrow{
+    .rec-arrow {
         position: absolute;
         z-index: 1;
     }
-    .rec-arrow-left{
+    .rec-arrow-left {
         left: -10px;
     }
-    .rec-arrow-right{
+    .rec-arrow-right {
         right: -10px;
     }
 }

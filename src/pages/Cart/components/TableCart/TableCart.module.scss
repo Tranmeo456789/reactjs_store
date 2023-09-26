@@ -1,0 +1,76 @@
+.section-detail {
+    margin-bottom: 10px;
+}
+.section-detail .list-item {
+    display: flex;
+}
+.section-detail .list-item > li {
+    margin-right: 5px;
+}
+.head-list-cart {
+    text-transform: uppercase;
+    padding: 12px 15px;
+    background: rgb(236, 232, 232);
+    border-top: 1px solid #d7cfcf;
+    font-size: 14px;
+}
+.row-product {
+    padding: 5px;
+    border-bottom: 1px solid #d7cfcf;
+}
+.wp-avatar {
+    display: flex;
+    justify-content: center;
+}
+.avatar-content {
+    height: 100px;
+}
+.cart-product-quantity {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 130px;
+    max-width: 100%;
+    border: 0.5px solid rgb(177, 177, 177);
+    border-radius: 5px;
+}
+.cart-product-quantity button {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+}
+.cart-product-quantity .count {
+    padding: 0.7rem 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #23394e;
+}
+.name-product {
+    color: blue;
+}
+.price-unit {
+    font-size: 14px;
+}
+.title-price {
+    font-size: 14px;
+    font-weight: bold;
+}
+.icon-remove-item-cart {
+    color: red;
+    cursor: pointer;
+}
+.height-100 {
+    height: 100%;
+}
+.price-product {
+    font-weight: bold;
+}
+.center-tab {
+    align-self: center;
+}
+.btn-remove {
+    background: transparent;
+    padding: 3px;
+}

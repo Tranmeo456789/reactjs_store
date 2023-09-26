@@ -1,14 +1,17 @@
-.wrapper{
+.wrapper {
     margin-bottom: 20px;
     position: relative;
 }
-.wrapper ul li{
+.wrapper ul li {
     background: #fff;
     padding: 4px 6px 6px 6px;
     width: 100%;
     border: 1px solid transparent;
-    &:hover{
+    &:hover {
         border: 1px solid #ddd;
     }
 }
-
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}

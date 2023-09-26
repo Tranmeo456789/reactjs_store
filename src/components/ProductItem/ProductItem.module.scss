@@ -8,7 +8,7 @@
         background: rgba(22, 24, 35, 0.03);
     }
 }
-.wrapper-content{
+.wrapper-content {
     padding: 5px 4px 6px 4px;
     display: block;
 }
@@ -64,12 +64,12 @@
 
 .price {
     font-size: 1.2rem;
-    color: rgba(233, 55, 55, 0.5);
+    color: #ee4d2d;
 }
 .price-content {
     text-align: center;
     margin-bottom: 15px;
-    color: rgba(233, 55, 55, 0.5);
+    color: #ee4d2d;
 }
 .action {
     display: flex;
@@ -86,4 +86,10 @@
     padding: 3px 9px;
     font-size: 12px;
     line-height: 20px;
+    &:hover {
+        background: rgb(238, 234, 234);
+    }
+}
+.space-unit {
+    padding: 0px 3px;
 }

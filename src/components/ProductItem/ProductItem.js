@@ -3,16 +3,28 @@ import PropTypes from 'prop-types';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
+import { useDispatch } from 'react-redux';
+
 import Image from '~/components/Image';
 import styles from './ProductItem.module.scss';
+import { addToCart, getTotals } from '~/slices/cartSlice';
+import FormatMoney from '~/components/FormatMoney';
 
 const cx = classNames.bind(styles);
+
 function ProductItem({ data, type = 'normal' }) {
+    const dispatch = useDispatch();
+    const handleAddToCart = (event, data) => {
+        event.preventDefault();
+        dispatch(addToCart(data));
+        dispatch(getTotals());
+    };
     const component = (data) => {
         const slug = data.id;
         const srcImage = data.thumbnail;
         const name = data.name;
         const price = data.price;
+        const unit = data.unit_product ? data.unit_product.name : '';
         switch (type) {
             case 'normal':
                 return (
@@ -24,7 +36,14 @@ function ProductItem({ data, type = 'normal' }) {
                             <h4 className={cx('name')}>
                                 <p>{name}</p>
                             </h4>
-                            <span className={cx('price')}>{price}đ</span>
+                            <span className={cx('price')}>
+                                <span>
+                                    <FormatMoney value={price} />
+                                </span>
+                                <sup>đ</sup>
+                                <span className={cx('space-unit')}>/</span>
+                                <span>{unit}</span>
+                            </span>
                         </div>
                     </Link>
                 );
@@ -42,10 +61,17 @@ function ProductItem({ data, type = 'normal' }) {
                                     <p>{name}</p>
                                 </h4>
                                 <div className={cx('price-content')}>
-                                    <span>{price}đ</span>
+                                    <span>
+                                        <FormatMoney value={price} />
+                                    </span>
+                                    <small>
+                                        <sup>đ</sup>
+                                    </small>
+                                    <span className={cx('space-unit')}>/</span>
+                                    <span>{unit}</span>
                                 </div>
                                 <div className={cx('action')}>
-                                    <button>Thêm giỏ hàng</button>
+                                    <button onClick={(e) => handleAddToCart(e, data)}>Thêm giỏ hàng</button>
                                 </div>
                             </div>
                         </Link>

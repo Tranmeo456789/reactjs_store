@@ -9,6 +9,7 @@ function Button({
     to,
     href,
     primary = false,
+    info = false,
     outline = false,
     text = false,
     rounded = false,
@@ -48,6 +49,7 @@ function Button({
     const classes = cx('wrapper', {
         [className]: className,
         primary,
+        info,
         outline,
         text,
         disabled,
@@ -80,5 +82,5 @@ Button.propTypes = {
     leftIcon: PropTypes.node,
     rightIcon: PropTypes.node,
     onClick: PropTypes.func,
-}
+};
 export default Button;

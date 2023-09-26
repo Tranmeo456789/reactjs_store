@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import ReactCarousel from 'react-elastic-carousel';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import styles from './Carousel.module.scss';
 import Image from '~/components/Image';
@@ -25,16 +27,23 @@ const items = [
     },
 ];
 
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+};
 function Carousel() {
     return (
         <div className={cx('wrapper')}>
-            <ReactCarousel itemsToShow={1} showArrows={false} enableMouseSwipe={true} enableAutoPlay={true} autoPlaySpeed={500} enableTilt={true} initialActiveIndex={0}>
+            <Slider {...settings}>
                 {items.map((item) => (
                     <div key={item.id}>
                         <Image className={cx('avatar')} src={item.thumbnail} />
                     </div>
                 ))}
-            </ReactCarousel>
+            </Slider>
         </div>
     );
 }
